@@ -10,7 +10,7 @@ const brickRowCount = 9;
 const brickColumnCount = 5;
 const delay = 500; //delay to reset the game
 
-// Create ball props
+//小球
 const ball = {
     x: canvas.width / 2,
     y: canvas.height / 2,
@@ -20,8 +20,7 @@ const ball = {
     dy: -4,
     visible: true
 };
-
-// Create paddle props
+//接球板
 const paddle = {
     x: canvas.width / 2 - 40,
     y: canvas.height - 20,
@@ -32,7 +31,7 @@ const paddle = {
     visible: true
 };
 
-// Create brick props
+// 砖块
 const brickInfo = {
     w: 70,
     h: 20,
@@ -175,6 +174,7 @@ function increaseScore() {
             ball.y = canvas.height / 2;
             ball.visible = true;
             paddle.visible = true;
+            alert("恭喜你完成了游戏");
         }, delay)
     }
 }
@@ -204,7 +204,7 @@ function update() {
 
     // Draw everything
     draw();
-
+    
     requestAnimationFrame(update);
 }
 
